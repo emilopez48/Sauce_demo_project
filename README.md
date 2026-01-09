@@ -18,6 +18,16 @@ Variables de entorno soportadas:
 - `HEADLESS` — `true`/`false` para forzar modo sin/ con UI.
 - `E2E_USER`, `E2E_PASS` — Credenciales a usar en los tests (por defecto `standard_user` / `secret_sauce`).
 
+### Archivo .env
+Para ejecuciones locales puedes usar un archivo .env en la raiz del proyecto.
+Hay un ejemplo en .env.example. Copia ese archivo como .env y completa tus valores:
+`dotenv
+BASE_URL=https://www.saucedemo.com
+E2E_USER=tu_usuario
+E2E_PASS=tu_password
+` 
+El archivo .env no se sube al repo (esta en .gitignore).
+
 Playwright está configurado para:
 - Ejecutar en Chromium, Firefox y WebKit.
 - `trace: 'on-first-retry'`, `screenshot: 'only-on-failure'`.
@@ -37,3 +47,14 @@ Desde la raíz del repo:
 ## Consejos
 - Usa `npm run test:ui` para depurar visualmente.
 - Si ajustas credenciales/URL, exporta `E2E_USER`, `E2E_PASS` y `BASE_URL`.
+
+### Archivo .env
+Para ejecuciones locales puedes usar un archivo .env en la raiz del proyecto.
+Hay un ejemplo en .env.example. Copia ese archivo como .env y completa tus valores:
+`dotenv
+BASE_URL=https://www.saucedemo.com
+E2E_USER=tu_usuario
+E2E_PASS=tu_password
+` 
+El archivo .env no se sube al repo (esta en .gitignore).
+
