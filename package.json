@@ -1,0 +1,27 @@
+{
+  "name": "playwright-project",
+  "version": "1.0.0",
+  "description": "Playwright end-to-end tests for Sauce Demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "PWDEBUG=1 playwright test --headed",
+    "lint": "eslint . --ext .ts",
+    "fmt": "prettier -w \"{pages,tests,fixtures,utils}/**/*.ts\" playwright.config.ts README.md",
+    "fmt:check": "prettier -c \"{pages,tests,fixtures,utils}/**/*.ts\" playwright.config.ts README.md"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.1",
+    "@typescript-eslint/eslint-plugin": "^8.13.0",
+    "@typescript-eslint/parser": "^8.13.0",
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.4.1"
+  }
+}
